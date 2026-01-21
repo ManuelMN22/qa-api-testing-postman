@@ -1,0 +1,13 @@
+{
+  "name": "qa-api-testing-postman",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "api:test": "newman run postman/collections/jsonplaceholder.collection.json -e postman/environments/jsonplaceholder.env.json",
+    "api:report": "newman run postman/collections/jsonplaceholder.collection.json -e postman/environments/jsonplaceholder.env.json -r htmlextra --reporter-htmlextra-export newman/reports/report.html"
+  },
+  "devDependencies": {
+    "newman": "^6.2.2",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
